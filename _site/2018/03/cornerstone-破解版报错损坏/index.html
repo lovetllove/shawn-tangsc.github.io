@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>ios消息推送证书申请流程</title>
-  <meta name="description" content="iOS消息推送证书申请流程：参考http://docs.getui.com/getui/mobile/ios/apns/">
+  <title>Mac SVN管理软件Conerstone破解版安装后提示“已损坏”问题</title>
+  <meta name="description" content="#Mac SVN管理软件Conerstone破解版安装后提示“已损坏”问题">
   <meta name="author" content="leopardpan">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="ios消息推送证书申请流程">
-  <meta name="twitter:description" content="iOS消息推送证书申请流程：参考http://docs.getui.com/getui/mobile/ios/apns/">
+  <meta name="twitter:title" content="Mac SVN管理软件Conerstone破解版安装后提示“已损坏”问题">
+  <meta name="twitter:description" content="#Mac SVN管理软件Conerstone破解版安装后提示“已损坏”问题">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="ios消息推送证书申请流程">
-  <meta property="og:description" content="iOS消息推送证书申请流程：参考http://docs.getui.com/getui/mobile/ios/apns/">
+  <meta property="og:title" content="Mac SVN管理软件Conerstone破解版安装后提示“已损坏”问题">
+  <meta property="og:description" content="#Mac SVN管理软件Conerstone破解版安装后提示“已损坏”问题">
   
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <link rel="canonical" href="http://localhost:4000/2018/03/ios%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/">
+  <link rel="canonical" href="http://localhost:4000/2018/03/cornerstone-%E7%A0%B4%E8%A7%A3%E7%89%88%E6%8A%A5%E9%94%99%E6%8D%9F%E5%9D%8F/">
   <link rel="alternate" type="application/rss+xml" title="唐嗣成" href="http://localhost:4000/feed.xml">
   
   <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
@@ -156,7 +156,7 @@
         <div class="content-wrapper__inner">
             <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title">ios消息推送证书申请流程</h1>
+    <h1 class="post-title">Mac SVN管理软件Conerstone破解版安装后提示“已损坏”问题</h1>
     <div class="post-meta">
       <img src="/images/calendar.png" width="20px"/> 
       <time datetime="2018-03-11 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2018-03-11</time>  
@@ -167,26 +167,41 @@
   </header>
 
   <section class="post">
-    <h1 id="ios消息推送证书申请流程">iOS消息推送证书申请流程：</h1>
-<p>参考http://docs.getui.com/getui/mobile/ios/apns/</p>
+    <p>#Mac SVN管理软件Conerstone破解版安装后提示“已损坏”问题</p>
+
+<blockquote>
+  <p>参考：http://blog.csdn.net/wsyx768/article/details/52756782</p>
+</blockquote>
+
+<p>##导致问题原因
+软件有经过了汉化或者破解，所以可能被Mac认为「已损坏」</p>
+
+<p>##解决问题办法</p>
+
+<p>系统偏好设置 -&gt; 安全性与隐私 -&gt; 通用 -&gt; 选择“任何来源”</p>
 
 <ul>
-  <li>
-    <p>1.访问<a href="https://developer.apple.com">ios开发者</a>点击右上角Account选择进入帐号首页，选择Certificates, Identifiers &amp; Profiles</p>
-  </li>
-  <li>2.在 Certificates, Identifiers &amp; Profiles 中，点击 App IDs 进入 App ID 列表。</li>
-  <li>3.选择你的应用或者点击+号创建一个App Id</li>
-  <li>4.点击edit 开启Push Notification功能。</li>
-  <li>5.点击create certificate，这个时候会进入certificates 中all 的add ios certificate</li>
-  <li>6.在About Creating a Certificate Signing Request (CSR)点击 continue</li>
-  <li>7.这个时候会进入Generate your certificate.需要你上传upload csr file</li>
-  <li>8.生成csrfile:打开本地的钥匙串访问–》证书助手–》从证书颁发者机构申请证书–》选择存储到磁盘–》填写用户电子邮件地址—&gt;保存，这个时候会生成一张CertificateSigningRequest.certSigningRequest证书。</li>
-  <li>9.将上述证书传给第7步，点击continue，生成APNs Push Certificate。</li>
-  <li>10.这个时候去https://developer.apple.com/account/ios/certificate 找到你刚刚生成type为APNs Development IOS 的certification （name是你应用的bundleId），下载它。</li>
-  <li>11.双击安装，钥匙串访问中你的证书会显示在我的证书中，（注意选择我的证书和 登录选项）。</li>
-  <li>12.导出.p12文件就可以了。</li>
+  <li>如果通用里面没有‘任何来源’这个选项，需要在终端输入：</li>
 </ul>
 
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo spctl --master-disable
+</code></pre>
+</div>
+
+<ul>
+  <li>如果需要隐藏‘任何来源’选项,在终端输入。</li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo spctl --master-enable
+</code></pre>
+</div>
+
+<h2 id="结语">结语</h2>
+
+<ul>
+  <li>这样，你应该就可以通过网上下载的破解版，来使用svn了.</li>
+  <li>mac 其实是自带终端的，也可以直接在终端里操作svn。</li>
+</ul>
 
 
   </section>
@@ -255,14 +270,9 @@
 
        <ul class="pager">
         
-        <li class="previous">
-            <a href="/2018/03/cornerstone-%E7%A0%B4%E8%A7%A3%E7%89%88%E6%8A%A5%E9%94%99%E6%8D%9F%E5%9D%8F/" data-toggle="tooltip" data-placement="top" title="Mac SVN管理软件Conerstone破解版安装后提示“已损坏”问题">上一篇：  <span>Mac SVN管理软件Conerstone破解版安装后提示“已损坏”问题</span>
-            </a>
-        </li>
-        
         
         <li class="next">
-            <a href="/2018/03/ios%E7%B1%BB%E6%89%A9%E5%B1%95%E8%8E%B7%E5%8F%96%E5%B1%9E%E6%80%A7%E9%97%AE%E9%A2%98/" data-toggle="tooltip" data-placement="top" title="IOS 类扩展获取对应类私有属性问题">下一篇：  <span>IOS 类扩展获取对应类私有属性问题</span>
+            <a href="/2018/03/ios%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/" data-toggle="tooltip" data-placement="top" title="ios消息推送证书申请流程">下一篇：  <span>ios消息推送证书申请流程</span>
             </a>
         </li>
         
@@ -276,8 +286,8 @@
     <script>
     
     var disqus_config = function () {
-        this.page.url = "http://localhost:4000/2018/03/ios%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/";
-        this.page.identifier = "/2018/03/ios%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/";
+        this.page.url = "http://localhost:4000/2018/03/cornerstone-%E7%A0%B4%E8%A7%A3%E7%89%88%E6%8A%A5%E9%94%99%E6%8D%9F%E5%9D%8F/";
+        this.page.identifier = "/2018/03/cornerstone-%E7%A0%B4%E8%A7%A3%E7%89%88%E6%8A%A5%E9%94%99%E6%8D%9F%E5%9D%8F/";
     };
     var disqus_shortname = 'Shawn';
     

@@ -5,8 +5,8 @@
     <description>欢迎来到我的个人站~</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 11 Mar 2018 22:20:28 +0800</pubDate>
-    <lastBuildDate>Sun, 11 Mar 2018 22:20:28 +0800</lastBuildDate>
+    <pubDate>Sun, 11 Mar 2018 22:22:25 +0800</pubDate>
+    <lastBuildDate>Sun, 11 Mar 2018 22:22:25 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       <item>
@@ -929,6 +929,96 @@ node_moduls //项目所需模块&lt;/p&gt;
       </item>
     
       <item>
+        <title>linux上安装nodejs+npm环境</title>
+        <description>&lt;h1 id=&quot;安装nodejsnpm环境&quot;&gt;安装nodejs+npm环境&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;添加一个nodejs用户（或切换至运维用户，注意需要非root权限）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;adduser nodejs //这一步看具体情况，是否需要！！
+passwd nodejs  //这一步看具体情况，是否需要！！
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;下载以及安装 &lt;a href=&quot;https://nodejs.org/en/download/&quot;&gt;node.js&lt;/a&gt;
+如果下载source版本，需要通过configure/make/make install进行安装，不过可能会由于依赖包问题需要升级c++
+建议直接下载二进制文件包，解压可以直接使用&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;这里我们先把下载的node-vx.x.x-linux-x64.tar.xz 包放在linux 用户根目录的Downloads目录下。&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;ps: mac本地下载tar包上传linux服务器的命令&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;语法：scp /Users/tangsicheng/Downloads/node-xxxx-linux-x64.tar.xz  &lt;服务器用户名&gt;@&lt;服务器地址&gt;:&lt;安装目录绝对路径&gt;&lt;/安装目录绝对路径&gt;&lt;/服务器地址&gt;&lt;/服务器用户名&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  scp /Users/tangsicheng/Downloads/node-xxxx-linux-x64.tar.xz  tsc@10.1.1.1:/home/tsc/Downloads
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;然后依次执行下列命令解压&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  su - nodejs //切换账号，看情况执行！
+  cd ~/Downloads/
+  xz -d node-xxxx-linux-x64.tar.xz
+  tar -xvf node-xxxx-linux-x64.tar
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;之后我选择把解压后的文件重新命名为nodejs，并且放到用户根目录下，这里可以自由选择到底放在哪个目录下。&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  mv node-v8.9.3-linux-x64 /home/&amp;lt;userName&amp;gt;/nodejs
+  cd ~
+  ls
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;现在应该就可以在用户根目录下看到nodejs的文件夹了。然后我们开始做软连接。&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  sudo ln -s /home/&amp;lt;userName&amp;gt;/nodejs/bin/node /usr/local/bin/node
+  sudo ln -s /home/&amp;lt;userName&amp;gt;/nodejs/bin/npm /usr/local/bin/npm
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;验证是否已经成功安装node，如果出现下面的情况就OK了&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  node -v
+  v6.11.0
+  npm -v
+  3.10.10
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;安装npm的中国淘宝镜像&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  npm get registry //获取目前的镜像地址
+
+  npm config set registry http://registry.npm.taobao.org/  //设置淘宝镜像
+
+  npm config set registry https://registry.npmjs.org/   //还原成最新的镜像
+
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 11 Mar 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/03/linux%E4%B8%8A%E5%AE%89%E8%A3%85nodejs+npm/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/03/linux%E4%B8%8A%E5%AE%89%E8%A3%85nodejs+npm/</guid>
+        
+        <category>服务器部署</category>
+        
+        
+      </item>
+    
+      <item>
         <title>IOS 类扩展获取对应类私有属性问题</title>
         <description>&lt;h1 id=&quot;ios-类扩展获取对应类私有属性问题&quot;&gt;IOS 类扩展获取对应类私有属性问题&lt;/h1&gt;
 
@@ -1027,6 +1117,53 @@ node_moduls //项目所需模块&lt;/p&gt;
         <guid isPermaLink="true">http://localhost:4000/2018/03/ios%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/</guid>
         
         <category>iOS</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Mac SVN管理软件Conerstone破解版安装后提示“已损坏”问题</title>
+        <description>&lt;p&gt;#Mac SVN管理软件Conerstone破解版安装后提示“已损坏”问题&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;参考：http://blog.csdn.net/wsyx768/article/details/52756782&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;##导致问题原因
+软件有经过了汉化或者破解，所以可能被Mac认为「已损坏」&lt;/p&gt;
+
+&lt;p&gt;##解决问题办法&lt;/p&gt;
+
+&lt;p&gt;系统偏好设置 -&amp;gt; 安全性与隐私 -&amp;gt; 通用 -&amp;gt; 选择“任何来源”&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;如果通用里面没有‘任何来源’这个选项，需要在终端输入：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo spctl --master-disable
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;如果需要隐藏‘任何来源’选项,在终端输入。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo spctl --master-enable
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;这样，你应该就可以通过网上下载的破解版，来使用svn了.&lt;/li&gt;
+  &lt;li&gt;mac 其实是自带终端的，也可以直接在终端里操作svn。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 11 Mar 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/03/cornerstone-%E7%A0%B4%E8%A7%A3%E7%89%88%E6%8A%A5%E9%94%99%E6%8D%9F%E5%9D%8F/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/03/cornerstone-%E7%A0%B4%E8%A7%A3%E7%89%88%E6%8A%A5%E9%94%99%E6%8D%9F%E5%9D%8F/</guid>
+        
+        <category>工具</category>
         
         
       </item>
