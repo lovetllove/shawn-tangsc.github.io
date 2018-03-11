@@ -6,9 +6,9 @@ description: "node+express 完整服务器搭建"
 tag: nodejs
 ---
 
-##node+express 完整服务器搭建
+## node+express 完整服务器搭建
 
-###一.初始化node+express服务器
+### 一.初始化node+express服务器
 + 首先初始化express项目
   
 	1. 全局安装两个模块
@@ -52,7 +52,7 @@ tag: nodejs
 	
 	>package.json //定义项目的基本配置信息等，包括项目所需的依赖和版本号。
   
-###二.重新选择页面渲染引擎，让项目可以直接家在html页面
+### 二.重新选择页面渲染引擎，让项目可以直接家在html页面
 
 + 在项目根目录执行
 
@@ -69,7 +69,7 @@ tag: nodejs
 	app.set('view engine', 'html');//注意要把之前jada删掉
 	```
 
-###三.设置静态资源的目录和读取方式，引入‘serve-static’
+### 三.设置静态资源的目录和读取方式，引入‘serve-static’
 + 添加依赖
 
 	```
@@ -96,7 +96,7 @@ tag: nodejs
 
 + serve-static 还有很多很有用的地方，这里我就不赘述了，详情可以参考[serve-static](https://www.npmjs.com/package/serve-static).
 
-###四，配置log4js,([参考博文](http://blog.csdn.net/q36835109/article/details/52458769?utm_source=itdadao&utm_medium=referral))
+### 四，配置log4js,([参考博文](http://blog.csdn.net/q36835109/article/details/52458769?utm_source=itdadao&utm_medium=referral))
 
 + 新建一个log4js的文件
 

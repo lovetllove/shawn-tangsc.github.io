@@ -5,8 +5,8 @@
     <description>欢迎来到我的个人站~</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 11 Mar 2018 21:26:25 +0800</pubDate>
-    <lastBuildDate>Sun, 11 Mar 2018 21:26:25 +0800</lastBuildDate>
+    <pubDate>Sun, 11 Mar 2018 21:59:04 +0800</pubDate>
+    <lastBuildDate>Sun, 11 Mar 2018 21:59:04 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       <item>
@@ -453,9 +453,9 @@ index.js、mutations.js、actions.js、getters.js及rootState.js&lt;/p&gt;
     
       <item>
         <title>node+express 完整服务器搭建</title>
-        <description>&lt;p&gt;##node+express 完整服务器搭建&lt;/p&gt;
+        <description>&lt;h2 id=&quot;nodeexpress-完整服务器搭建&quot;&gt;node+express 完整服务器搭建&lt;/h2&gt;
 
-&lt;p&gt;###一.初始化node+express服务器&lt;/p&gt;
+&lt;h3 id=&quot;一初始化nodeexpress服务器&quot;&gt;一.初始化node+express服务器&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;首先初始化express项目&lt;/p&gt;
@@ -528,7 +528,7 @@ node_moduls //项目所需模块&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;###二.重新选择页面渲染引擎，让项目可以直接家在html页面&lt;/p&gt;
+&lt;h3 id=&quot;二重新选择页面渲染引擎让项目可以直接家在html页面&quot;&gt;二.重新选择页面渲染引擎，让项目可以直接家在html页面&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -551,7 +551,7 @@ node_moduls //项目所需模块&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;###三.设置静态资源的目录和读取方式，引入‘serve-static’&lt;/p&gt;
+&lt;h3 id=&quot;三设置静态资源的目录和读取方式引入serve-static&quot;&gt;三.设置静态资源的目录和读取方式，引入‘serve-static’&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;添加依赖&lt;/p&gt;
@@ -588,7 +588,7 @@ node_moduls //项目所需模块&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;###四，配置log4js,(&lt;a href=&quot;http://blog.csdn.net/q36835109/article/details/52458769?utm_source=itdadao&amp;amp;utm_medium=referral&quot;&gt;参考博文&lt;/a&gt;)&lt;/p&gt;
+&lt;h3 id=&quot;四配置log4js参考博文&quot;&gt;四，配置log4js,(&lt;a href=&quot;http://blog.csdn.net/q36835109/article/details/52458769?utm_source=itdadao&amp;amp;utm_medium=referral&quot;&gt;参考博文&lt;/a&gt;)&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
