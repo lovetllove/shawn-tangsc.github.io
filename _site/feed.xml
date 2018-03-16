@@ -5,8 +5,8 @@
     <description>欢迎来到我的个人站~</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 16 Mar 2018 13:55:03 +0800</pubDate>
-    <lastBuildDate>Fri, 16 Mar 2018 13:55:03 +0800</lastBuildDate>
+    <pubDate>Fri, 16 Mar 2018 13:57:38 +0800</pubDate>
+    <lastBuildDate>Fri, 16 Mar 2018 13:57:38 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       <item>
@@ -42,7 +42,7 @@
 &lt;h3 id=&quot;axios调用一个接口在ie中看到script7002-xmlhttprequest-网络错误-0x80070005-拒绝访问&quot;&gt;axios调用一个接口，在IE中看到SCRIPT7002: XMLHttpRequest: 网络错误 0x80070005, 拒绝访问&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;碰到的问题是我本人碰到这个问题的时候，主要是因为当我的接口url有中文参数&lt;/li&gt;
+  &lt;li&gt;我本人碰到这个问题的时候，主要是因为当我的接口url有中文参数&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1:3333/app/info?app=中文参数
@@ -55,7 +55,12 @@
 &lt;p&gt;的错误。&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;解决方法就是把url上的‘中文参数’换成英文code，我猜测是中文在编码后被转意了，直接导致http的请求出了问题，被停止了。&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;解决方法就是把url上的‘中文参数’换成英文code，我猜测是中文在编码后被转意了，直接导致http的请求出了问题，被停止了。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;这只是其中一种出这个报错的情况。&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
