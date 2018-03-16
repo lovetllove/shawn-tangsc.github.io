@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "linux上安装nodejs+npm环境"
+title: "linux上安装nodejs+npm+pm2环境"
 date: 2018-03-11
-description: "linux上安装nodejs+npm环境"
+description: "linux上安装nodejs+npm+pm2环境"
 tag: 服务器部署
 ---
 
-# 安装nodejs+npm环境
+### 一.安装nodejs+npm环境
 + 添加一个nodejs用户（或切换至运维用户，注意需要非root权限）
 
 ```
@@ -75,13 +75,27 @@ passwd nodejs  //这一步看具体情况，是否需要！！
 	```
 
 
+### 安装pm2 进程守护
 
+* 全局引入pm2依赖
 
+	```
+	npm install pm2 -g
+	```
 
+* 软连接
+	
+	```
+	sudo ln -s /home/axxt/nodejs/bin/pm2  /usr/local/bin/pm2
+	```
 
+* 验证
 
-
-
+	```
+	 pm2 -v
+	2.10.1
+	```
+	看到出现版本号了，说明就正确了。
 
 
 

@@ -110,7 +110,7 @@ tag: nodejs
 	    "appenders": {
 	        "access": {
 	            "type": "dateFile",
-	            "filename": "log/access.log",
+	            "filename": "log/app.log",
 	            "pattern": "-yyyy-MM-dd",
 	            "category": "http"
 	        },
@@ -124,7 +124,7 @@ tag: nodejs
 	        "errorFile": {
 	            "type": "file",
 	            "pattern": "-yyyy-MM-dd",
-	            "filename": "log/errors.log"
+	            "filename": "log/app.log"
 	        },
 	        "errors": {
 	            "type": "logLevelFilter",
@@ -138,7 +138,8 @@ tag: nodejs
 	    "categories": {
 	        "default": { "appenders": [ "app", "errors", "stdout" ], "level": "INFO" },
 	        "http": { "appenders": [ "access"], "level": "INFO" }
-	    }
+	    },
+	     pm2: true //这里是用于不出现和pm2的log不兼容的情况。
 	});
 	// log4js.configure(require('./log4js.json'));
 	
@@ -162,5 +163,23 @@ tag: nodejs
 > 一定要注意顺序!
 
 
+### 五.跨平台设置
+* 大多数情况下，在windows平台下使用类似于: NODE_ENV=production的命令行指令会卡住，windows平台与POSIX在使用命令行时有许多区别（例如在POSIX，使用$ENV_VAR,在windows，使用%ENV_VAR%。。。）
 
+* cross-env 可以让这一切都变得简单
+
+* 引入依赖 
+
+	```
+	npm i --save-dev cross-env
+	```
+* 在npm脚本package.json 中配置
+
+```
+{
+  "scripts": {
+    "build": "cross-env NODE_ENV=production node ./bin/www"
+  }
+}
+```
 
