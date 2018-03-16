@@ -6,15 +6,14 @@ description: "Mac SVN管理软件Conerstone破解版安装后提示“已损坏�
 tag: 工具
 ---
 
-#Mac SVN管理软件Conerstone破解版安装后提示“已损坏”问题
 
 > 参考：http://blog.csdn.net/wsyx768/article/details/52756782
 
 
-##导致问题原因
+### 导致问题原因
 软件有经过了汉化或者破解，所以可能被Mac认为「已损坏」
 
-##解决问题办法
+### 解决问题办法
 
  系统偏好设置 -> 安全性与隐私 -> 通用 -> 选择“任何来源”
  
