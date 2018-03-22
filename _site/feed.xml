@@ -5,9 +5,93 @@
     <description>欢迎来到我的个人站~</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 16 Mar 2018 14:00:23 +0800</pubDate>
-    <lastBuildDate>Fri, 16 Mar 2018 14:00:23 +0800</lastBuildDate>
+    <pubDate>Thu, 22 Mar 2018 19:21:17 +0800</pubDate>
+    <lastBuildDate>Thu, 22 Mar 2018 19:21:17 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>ios企业级证书配置教程</title>
+        <description>&lt;h3 id=&quot;1登陆苹果开发者账号&quot;&gt;1.登陆&lt;a href=&quot;https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;amp;path=%2Faccount%2Fios%2Fprofile%2F&amp;amp;rv=1&quot;&gt;苹果开发者账号&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h3 id=&quot;2创建certificates&quot;&gt;2.创建Certificates&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;这里你需要先点击Certificates » All » 右上角添加&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/posts/iOS-cer-conf/img1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;选择Development » iOS App Devolopment » 一路下一步。。。。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;这个时候你会卡在Upload CSR file 这个页面。&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;你需要做的就是从你的mac中打开钥匙串，然后选择钥匙串访问–》证书助手–》从证书颁发者机构申请证书。&lt;/li&gt;
+      &lt;li&gt;填写一个邮箱»选择存储到磁盘»继续»选择一个本地路径»下载。&lt;/li&gt;
+      &lt;li&gt;现在，你的csr文件就静静地躺在了你指定的目录中。&lt;/li&gt;
+      &lt;li&gt;将这张csr文件 upload上去后，你就可以下载你生成的certificates了，并且同时，这张证书可以在任意mac电脑上安装，这样这台mac上就可以看到你开发组了。&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;3添加你的开发组&quot;&gt;3.添加你的开发组&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;首先，通过上一步后，你已经可以在你的文件夹里面看到一张ios_development.cer,双击它就可以将它安装到你的钥匙串里面。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;然后请打开你的xcode，点击工程根目录»选择targets»general»Signing»Team»add an Account&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;然后输入你要添加的账号AppId 和账号密码。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;这个时候，你就可以看到Team里面有你之前申请的certivicates的名字了&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;4生成provisioning-profiles&quot;&gt;4.生成provisioning Profiles&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;当你选择了team后，新版的xcode会根据你的项目配置自动在你本地生成App IDs，这个时候你就需要生成一张Provisioning Profiles（下文就称呼为pp文件）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;点击Provisioning Profiles » All » 右上角的add&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;选择Development » iOS App Development» Continue »选择你的App Id »continue » 选择开发者 » 各种选择开发者，选择设备，然后下一步就可以看到&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;最后你会发现pp文件已经生成好了。&lt;/li&gt;
+  &lt;li&gt;ps： 这里特别提一点，如果是刚刚申请的企业级账号，一般要两周才能生成in house 描述文件。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;5现在我们去申请一下推送证书如果需要的话&quot;&gt;5.现在我们去申请一下推送证书（如果需要的话。。。。）&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;理论上你的xcode里面应该已经没问题了，但是如果你的项目里面有选消息推送，那还需要申请一张消息推送证书。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;点击create certificate，这个时候会进入certificates 中all 的add ios certificate。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;一路Continue 后还会卡在Upload CSR file 这个页面 。就用之前你在第一步中申请的那张csr文件upload。。。。最后你的certificates中会生成一张type为App Push Services 的证书&lt;/li&gt;
+  &lt;li&gt;下载它（aps文件），双击安装到本机。&lt;/li&gt;
+  &lt;li&gt;现在，你的xcode里面应该没问题了，Signing这里就应该没有红色了。（至少我是这样。。。。）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;6&quot;&gt;6.&lt;/h3&gt;
+
+</description>
+        <pubDate>Thu, 22 Mar 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/03/iOS%E4%BC%81%E4%B8%9A%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/03/iOS%E4%BC%81%E4%B8%9A%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</guid>
+        
+        <category>iOS</category>
+        
+        
+      </item>
     
       <item>
         <title>vue开发过程中的一些ie 11 浏览器兼容处理</title>
@@ -1238,51 +1322,6 @@ passwd nodejs  //这一步看具体情况，是否需要！！
         <guid isPermaLink="true">http://localhost:4000/2018/03/ios%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/</guid>
         
         <category>iOS</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Mac SVN管理软件Conerstone破解版安装后提示“已损坏”问题</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;参考：http://blog.csdn.net/wsyx768/article/details/52756782&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;导致问题原因&quot;&gt;导致问题原因&lt;/h3&gt;
-&lt;p&gt;软件有经过了汉化或者破解，所以可能被Mac认为「已损坏」&lt;/p&gt;
-
-&lt;h3 id=&quot;解决问题办法&quot;&gt;解决问题办法&lt;/h3&gt;
-
-&lt;p&gt;系统偏好设置 -&amp;gt; 安全性与隐私 -&amp;gt; 通用 -&amp;gt; 选择“任何来源”&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;如果通用里面没有‘任何来源’这个选项，需要在终端输入：&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo spctl --master-disable
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;如果需要隐藏‘任何来源’选项,在终端输入。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo spctl --master-enable
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;这样，你应该就可以通过网上下载的破解版，来使用svn了.&lt;/li&gt;
-  &lt;li&gt;mac 其实是自带终端的，也可以直接在终端里操作svn。&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 11 Mar 2018 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2018/03/cornerstone-%E7%A0%B4%E8%A7%A3%E7%89%88%E6%8A%A5%E9%94%99%E6%8D%9F%E5%9D%8F/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/03/cornerstone-%E7%A0%B4%E8%A7%A3%E7%89%88%E6%8A%A5%E9%94%99%E6%8D%9F%E5%9D%8F/</guid>
-        
-        <category>工具</category>
         
         
       </item>
