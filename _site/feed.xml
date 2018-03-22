@@ -5,8 +5,8 @@
     <description>欢迎来到我的个人站~</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Mar 2018 19:21:17 +0800</pubDate>
-    <lastBuildDate>Thu, 22 Mar 2018 19:21:17 +0800</lastBuildDate>
+    <pubDate>Thu, 22 Mar 2018 19:33:46 +0800</pubDate>
+    <lastBuildDate>Thu, 22 Mar 2018 19:33:46 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       <item>
@@ -18,19 +18,28 @@
   &lt;li&gt;这里你需要先点击Certificates » All » 右上角添加&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/posts/iOS-cer-conf/img1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/iOS-cer-conf/img1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;选择Development » iOS App Devolopment » 一路下一步。。。。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;这个时候你会卡在Upload CSR file 这个页面。&lt;/p&gt;
+  &lt;li&gt;选择Development » iOS App Devolopment » 一路下一步。。。。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/iOS-cer-conf/WechatIMG133.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;这个时候你会卡在Upload CSR file 这个页面。
     &lt;ol&gt;
-      &lt;li&gt;你需要做的就是从你的mac中打开钥匙串，然后选择钥匙串访问–》证书助手–》从证书颁发者机构申请证书。&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;你需要做的就是从你的mac中打开钥匙串，然后选择钥匙串访问–》证书助手–》从证书颁发者机构申请证书。&lt;/p&gt;
+
+        &lt;p&gt;&lt;img src=&quot;/images/posts/iOS-cer-conf/img2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
       &lt;li&gt;填写一个邮箱»选择存储到磁盘»继续»选择一个本地路径»下载。&lt;/li&gt;
       &lt;li&gt;现在，你的csr文件就静静地躺在了你指定的目录中。&lt;/li&gt;
-      &lt;li&gt;将这张csr文件 upload上去后，你就可以下载你生成的certificates了，并且同时，这张证书可以在任意mac电脑上安装，这样这台mac上就可以看到你开发组了。&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;将这张csr文件 upload上去后，你就可以下载你生成的certificates了，并且同时，这张证书可以在任意mac电脑上安装，这样这台mac上就可以看到你开发组了。&lt;/p&gt;
+
+        &lt;p&gt;&lt;img src=&quot;/images/posts/iOS-cer-conf/1521712192392.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -43,6 +52,8 @@
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;然后请打开你的xcode，点击工程根目录»选择targets»general»Signing»Team»add an Account&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/images/posts/iOS-cer-conf/WechatIMG131.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;然后输入你要添加的账号AppId 和账号密码。&lt;/p&gt;
@@ -61,6 +72,11 @@
   &lt;li&gt;
     &lt;p&gt;点击Provisioning Profiles » All » 右上角的add&lt;/p&gt;
   &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/iOS-cer-conf/WechatIMG132.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;选择Development » iOS App Development» Continue »选择你的App Id »continue » 选择开发者 » 各种选择开发者，选择设备，然后下一步就可以看到&lt;/p&gt;
   &lt;/li&gt;
@@ -76,9 +92,20 @@
   &lt;li&gt;
     &lt;p&gt;点击create certificate，这个时候会进入certificates 中all 的add ios certificate。&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;一路Continue 后还会卡在Upload CSR file 这个页面 。就用之前你在第一步中申请的那张csr文件upload。。。。最后你的certificates中会生成一张type为App Push Services 的证书&lt;/li&gt;
-  &lt;li&gt;下载它（aps文件），双击安装到本机。&lt;/li&gt;
-  &lt;li&gt;现在，你的xcode里面应该没问题了，Signing这里就应该没有红色了。（至少我是这样。。。。）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/iOS-cer-conf/1521714014946.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;一路Continue 后还会卡在Upload CSR file 这个页面 。就用之前你在第一步中申请的那张csr文件upload。。。。最后你的certificates中会生成一张type为App Push Services 的证书&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;下载它（aps文件），双击安装到本机。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;现在，你的xcode里面应该没问题了，Signing这里就应该没有红色了。（至少我是这样。。。。）&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;6&quot;&gt;6.&lt;/h3&gt;
