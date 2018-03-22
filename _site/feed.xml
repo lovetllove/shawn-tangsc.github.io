@@ -5,13 +5,21 @@
     <description>欢迎来到我的个人站~</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Mar 2018 19:33:46 +0800</pubDate>
-    <lastBuildDate>Thu, 22 Mar 2018 19:33:46 +0800</lastBuildDate>
+    <pubDate>Thu, 22 Mar 2018 19:44:35 +0800</pubDate>
+    <lastBuildDate>Thu, 22 Mar 2018 19:44:35 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       <item>
         <title>ios企业级证书配置教程</title>
-        <description>&lt;h3 id=&quot;1登陆苹果开发者账号&quot;&gt;1.登陆&lt;a href=&quot;https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;amp;path=%2Faccount%2Fios%2Fprofile%2F&amp;amp;rv=1&quot;&gt;苹果开发者账号&lt;/a&gt;&lt;/h3&gt;
+        <description>&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
+
+&lt;p&gt;最近在弄了一下ios企业账号的开发测试发布，这套东西真的挺复杂，网上的教程也比较乱。&lt;/p&gt;
+
+&lt;p&gt;这里先感谢一下每个帮助我完成这套流程的小伙伴！非常感谢！&lt;/p&gt;
+
+&lt;p&gt;下面我会一步一步的说明iOS企业账号拿到手后的一些配置&lt;/p&gt;
+
+&lt;h3 id=&quot;1登陆苹果开发者账号&quot;&gt;1.登陆&lt;a href=&quot;https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;amp;path=%2Faccount%2Fios%2Fprofile%2F&amp;amp;rv=1&quot;&gt;苹果开发者账号&lt;/a&gt;&lt;/h3&gt;
 
 &lt;h3 id=&quot;2创建certificates&quot;&gt;2.创建Certificates&lt;/h3&gt;
 &lt;ul&gt;
