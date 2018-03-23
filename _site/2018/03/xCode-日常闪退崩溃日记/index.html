@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>ios企业级证书配置教程</title>
-  <meta name="description" content="前言">
+  <title>xcode（9.2） 日常闪退崩溃日记</title>
+  <meta name="description" content="前言不知道是我的电脑问题，还是人品问题，我的mac在使用xcode的时候出现了各种奇葩的闪退的问题，看来问题会不断，所以我这里就一个一个记下来">
   <meta name="author" content="leopardpan">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="ios企业级证书配置教程">
-  <meta name="twitter:description" content="前言">
+  <meta name="twitter:title" content="xcode（9.2） 日常闪退崩溃日记">
+  <meta name="twitter:description" content="前言不知道是我的电脑问题，还是人品问题，我的mac在使用xcode的时候出现了各种奇葩的闪退的问题，看来问题会不断，所以我这里就一个一个记下来">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="ios企业级证书配置教程">
-  <meta property="og:description" content="前言">
+  <meta property="og:title" content="xcode（9.2） 日常闪退崩溃日记">
+  <meta property="og:description" content="前言不知道是我的电脑问题，还是人品问题，我的mac在使用xcode的时候出现了各种奇葩的闪退的问题，看来问题会不断，所以我这里就一个一个记下来">
   
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <link rel="canonical" href="http://localhost:4000/2018/03/iOS%E4%BC%81%E4%B8%9A%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/">
+  <link rel="canonical" href="http://localhost:4000/2018/03/xCode-%E6%97%A5%E5%B8%B8%E9%97%AA%E9%80%80%E5%B4%A9%E6%BA%83%E6%97%A5%E8%AE%B0/">
   <link rel="alternate" type="application/rss+xml" title="唐嗣成" href="http://localhost:4000/feed.xml">
   
   <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
@@ -156,7 +156,7 @@
         <div class="content-wrapper__inner">
             <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title">ios企业级证书配置教程</h1>
+    <h1 class="post-title">xcode（9.2） 日常闪退崩溃日记</h1>
     <div class="post-meta">
       <img src="/images/calendar.png" width="20px"/> 
       <time datetime="2018-03-22 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2018-03-22</time>  
@@ -168,112 +168,38 @@
 
   <section class="post">
     <h3 id="前言">前言</h3>
+<p>不知道是我的电脑问题，还是人品问题，我的mac在使用xcode的时候出现了各种奇葩的闪退的问题，看来问题会不断，所以我这里就一个一个记下来</p>
 
-<p>最近在弄了一下ios企业账号的开发测试发布，这套东西真的挺复杂，网上的教程也比较乱。</p>
+<h3 id="1在安装打包的时候export的时候崩溃闪退">1.在安装打包的时候，export的时候崩溃闪退。</h3>
 
-<p>这里先感谢一下每个帮助我完成这套流程的小伙伴！非常感谢！</p>
-
-<p>下面我会一步一步的说明iOS企业账号拿到手后的一些配置</p>
-
-<h3 id="1登陆苹果开发者账号">1.登陆<a href="https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%2Faccount%2Fios%2Fprofile%2F&amp;rv=1">苹果开发者账号</a></h3>
-
-<h3 id="2创建certificates">2.创建Certificates</h3>
 <ul>
-  <li>这里你需要先点击Certificates » All » 右上角添加</li>
+  <li>在网上找一下，基本的思路就是你在进入archive页面的时候，关掉你的xcode，基本就没问题了。</li>
 </ul>
 
-<p><img src="/images/posts/iOS-cer-conf/img1.jpg" alt="" /></p>
+<h3 id="2新建目录保存文件-的时候闪退">2.新建目录／保存文件 的时候闪退</h3>
 
 <ul>
-  <li>选择Development » iOS App Devolopment » 一路下一步。。。。</li>
-</ul>
+  <li>
+    <p>这个问题特别奇葩，我头疼了好久，具体的情况是这样的，在使用的时候，如果你刚刚打开xcode的时候保存文件了，那么之后保存文件的动作都不会有问题，而你一旦新建文件，就会闪退崩溃。同时，如果你在打开xcode的时候先新建了文件，那之后如果你保存任何修改都会闪退。</p>
+  </li>
+  <li>
+    <p>我找到了一个不是解决办法的办法，（因为我当时做了两个动作，我也不知道是因为哪个动作好的，或许是两个动作都做了才好的）</p>
 
-<p><img src="/images/posts/iOS-cer-conf/WechatIMG133.jpeg" alt="" /></p>
-<ul>
-  <li>这个时候你会卡在Upload CSR file 这个页面。
     <ol>
       <li>
-        <p>你需要做的就是从你的mac中打开钥匙串，然后选择钥匙串访问–》证书助手–》从证书颁发者机构申请证书。</p>
-
-        <p><img src="/images/posts/iOS-cer-conf/img2.jpeg" alt="" /></p>
+        <p>因为当时我跟着网上装了xcode的Alcatraz插件，所以你先找到xcode目录下的Alcatraz目录，然后删掉。</p>
       </li>
-      <li>填写一个邮箱»选择存储到磁盘»继续»选择一个本地路径»下载。</li>
-      <li>现在，你的csr文件就静静地躺在了你指定的目录中。</li>
       <li>
-        <p>将这张csr文件 upload上去后，你就可以下载你生成的certificates了，并且同时，这张证书可以在任意mac电脑上安装，这样这台mac上就可以看到你开发组了。</p>
-
-        <p><img src="/images/posts/iOS-cer-conf/1521712192392.jpg" alt="" /></p>
+        <p>去/Library/Logs 下删除所有crash日志</p>
       </li>
     </ol>
   </li>
-</ul>
-
-<h3 id="3添加你的开发组">3.添加你的开发组</h3>
-
-<ul>
   <li>
-    <p>首先，通过上一步后，你已经可以在你的文件夹里面看到一张ios_development.cer,双击它就可以将它安装到你的钥匙串里面。</p>
-  </li>
-  <li>
-    <p>然后请打开你的xcode，点击工程根目录»选择targets»general»Signing»Team»add an Account</p>
-
-    <p><img src="/images/posts/iOS-cer-conf/WechatIMG131.jpeg" alt="" /></p>
-  </li>
-  <li>
-    <p>然后输入你要添加的账号AppId 和账号密码。</p>
-  </li>
-  <li>
-    <p>这个时候，你就可以看到Team里面有你之前申请的certivicates的名字了</p>
+    <p>嗯，就这样，我的xcode就好了。。。。。所以，别问我为什么，我也想找个人问问为什么。。。。。</p>
   </li>
 </ul>
 
-<h3 id="4生成provisioning-profiles">4.生成provisioning Profiles</h3>
-
-<ul>
-  <li>
-    <p>当你选择了team后，新版的xcode会根据你的项目配置自动在你本地生成App IDs，这个时候你就需要生成一张Provisioning Profiles（下文就称呼为pp文件）</p>
-  </li>
-  <li>
-    <p>点击Provisioning Profiles » All » 右上角的add</p>
-  </li>
-</ul>
-
-<p><img src="/images/posts/iOS-cer-conf/WechatIMG132.jpeg" alt="" /></p>
-
-<ul>
-  <li>
-    <p>选择Development » iOS App Development» Continue »选择你的App Id »continue » 选择开发者 » 各种选择开发者，选择设备，然后下一步就可以看到</p>
-  </li>
-  <li>最后你会发现pp文件已经生成好了。</li>
-  <li>ps： 这里特别提一点，如果是刚刚申请的企业级账号，一般要两周才能生成in house 描述文件。</li>
-</ul>
-
-<h3 id="5现在我们去申请一下推送证书如果需要的话">5.现在我们去申请一下推送证书（如果需要的话。。。。）</h3>
-<ul>
-  <li>
-    <p>理论上你的xcode里面应该已经没问题了，但是如果你的项目里面有选消息推送，那还需要申请一张消息推送证书。</p>
-  </li>
-  <li>
-    <p>点击create certificate，这个时候会进入certificates 中all 的add ios certificate。</p>
-  </li>
-</ul>
-
-<p><img src="/images/posts/iOS-cer-conf/1521714014946.jpg" alt="" /></p>
-
-<ul>
-  <li>
-    <p>一路Continue 后还会卡在Upload CSR file 这个页面 。就用之前你在第一步中申请的那张csr文件upload。。。。最后你的certificates中会生成一张type为App Push Services 的证书</p>
-  </li>
-  <li>
-    <p>下载它（aps文件），双击安装到本机。</p>
-  </li>
-  <li>
-    <p>现在，你的xcode里面应该没问题了，Signing这里就应该没有红色了。（至少我是这样。。。。）</p>
-  </li>
-</ul>
-
-<h3 id="6">6.</h3>
-
+<center>&copy;2018/3/23 Shawn Tangsicheng</center>
 
 
   </section>
@@ -343,15 +269,10 @@
        <ul class="pager">
         
         <li class="previous">
-            <a href="/2018/03/vue%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9Bie-11-%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E5%A4%84%E7%90%86/" data-toggle="tooltip" data-placement="top" title="vue开发过程中的一些ie 11 浏览器兼容处理">上一篇：  <span>vue开发过程中的一些ie 11 浏览器兼容处理</span>
+            <a href="/2018/03/iOS%E4%BC%81%E4%B8%9A%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/" data-toggle="tooltip" data-placement="top" title="ios企业级证书配置教程">上一篇：  <span>ios企业级证书配置教程</span>
             </a>
         </li>
         
-        
-        <li class="next">
-            <a href="/2018/03/xCode-%E6%97%A5%E5%B8%B8%E9%97%AA%E9%80%80%E5%B4%A9%E6%BA%83%E6%97%A5%E8%AE%B0/" data-toggle="tooltip" data-placement="top" title="xcode（9.2） 日常闪退崩溃日记">下一篇：  <span>xcode（9.2） 日常闪退崩溃日记</span>
-            </a>
-        </li>
         
     </ul>
 </section>
@@ -363,8 +284,8 @@
     <script>
     
     var disqus_config = function () {
-        this.page.url = "http://localhost:4000/2018/03/iOS%E4%BC%81%E4%B8%9A%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/";
-        this.page.identifier = "/2018/03/iOS%E4%BC%81%E4%B8%9A%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/";
+        this.page.url = "http://localhost:4000/2018/03/xCode-%E6%97%A5%E5%B8%B8%E9%97%AA%E9%80%80%E5%B4%A9%E6%BA%83%E6%97%A5%E8%AE%B0/";
+        this.page.identifier = "/2018/03/xCode-%E6%97%A5%E5%B8%B8%E9%97%AA%E9%80%80%E5%B4%A9%E6%BA%83%E6%97%A5%E8%AE%B0/";
     };
     var disqus_shortname = 'Shawn';
     

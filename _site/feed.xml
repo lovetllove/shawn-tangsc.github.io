@@ -5,9 +5,54 @@
     <description>欢迎来到我的个人站~</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Mar 2018 19:44:35 +0800</pubDate>
-    <lastBuildDate>Thu, 22 Mar 2018 19:44:35 +0800</lastBuildDate>
+    <pubDate>Fri, 23 Mar 2018 16:06:59 +0800</pubDate>
+    <lastBuildDate>Fri, 23 Mar 2018 16:06:59 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>xcode（9.2） 日常闪退崩溃日记</title>
+        <description>&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
+&lt;p&gt;不知道是我的电脑问题，还是人品问题，我的mac在使用xcode的时候出现了各种奇葩的闪退的问题，看来问题会不断，所以我这里就一个一个记下来&lt;/p&gt;
+
+&lt;h3 id=&quot;1在安装打包的时候export的时候崩溃闪退&quot;&gt;1.在安装打包的时候，export的时候崩溃闪退。&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在网上找一下，基本的思路就是你在进入archive页面的时候，关掉你的xcode，基本就没问题了。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2新建目录保存文件-的时候闪退&quot;&gt;2.新建目录／保存文件 的时候闪退&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;这个问题特别奇葩，我头疼了好久，具体的情况是这样的，在使用的时候，如果你刚刚打开xcode的时候保存文件了，那么之后保存文件的动作都不会有问题，而你一旦新建文件，就会闪退崩溃。同时，如果你在打开xcode的时候先新建了文件，那之后如果你保存任何修改都会闪退。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;我找到了一个不是解决办法的办法，（因为我当时做了两个动作，我也不知道是因为哪个动作好的，或许是两个动作都做了才好的）&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;因为当时我跟着网上装了xcode的Alcatraz插件，所以你先找到xcode目录下的Alcatraz目录，然后删掉。&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;去/Library/Logs 下删除所有crash日志&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;嗯，就这样，我的xcode就好了。。。。。所以，别问我为什么，我也想找个人问问为什么。。。。。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;center&gt;&amp;copy;2018/3/23 Shawn Tangsicheng&lt;/center&gt;
+</description>
+        <pubDate>Thu, 22 Mar 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/03/xCode-%E6%97%A5%E5%B8%B8%E9%97%AA%E9%80%80%E5%B4%A9%E6%BA%83%E6%97%A5%E8%AE%B0/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/03/xCode-%E6%97%A5%E5%B8%B8%E9%97%AA%E9%80%80%E5%B4%A9%E6%BA%83%E6%97%A5%E8%AE%B0/</guid>
+        
+        <category>iOS</category>
+        
+        
+      </item>
     
       <item>
         <title>ios企业级证书配置教程</title>
@@ -1323,38 +1368,6 @@ passwd nodejs  //这一步看具体情况，是否需要！！
         <pubDate>Sun, 11 Mar 2018 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2018/03/ios%E7%B1%BB%E6%89%A9%E5%B1%95%E8%8E%B7%E5%8F%96%E5%B1%9E%E6%80%A7%E9%97%AE%E9%A2%98/</link>
         <guid isPermaLink="true">http://localhost:4000/2018/03/ios%E7%B1%BB%E6%89%A9%E5%B1%95%E8%8E%B7%E5%8F%96%E5%B1%9E%E6%80%A7%E9%97%AE%E9%A2%98/</guid>
-        
-        <category>iOS</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>ios消息推送证书申请流程</title>
-        <description>&lt;h1 id=&quot;ios消息推送证书申请流程&quot;&gt;iOS消息推送证书申请流程：&lt;/h1&gt;
-&lt;p&gt;参考http://docs.getui.com/getui/mobile/ios/apns/&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;1.访问&lt;a href=&quot;https://developer.apple.com&quot;&gt;ios开发者&lt;/a&gt;点击右上角Account选择进入帐号首页，选择Certificates, Identifiers &amp;amp; Profiles&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;2.在 Certificates, Identifiers &amp;amp; Profiles 中，点击 App IDs 进入 App ID 列表。&lt;/li&gt;
-  &lt;li&gt;3.选择你的应用或者点击+号创建一个App Id&lt;/li&gt;
-  &lt;li&gt;4.点击edit 开启Push Notification功能。&lt;/li&gt;
-  &lt;li&gt;5.点击create certificate，这个时候会进入certificates 中all 的add ios certificate&lt;/li&gt;
-  &lt;li&gt;6.在About Creating a Certificate Signing Request (CSR)点击 continue&lt;/li&gt;
-  &lt;li&gt;7.这个时候会进入Generate your certificate.需要你上传upload csr file&lt;/li&gt;
-  &lt;li&gt;8.生成csrfile:打开本地的钥匙串访问–》证书助手–》从证书颁发者机构申请证书–》选择存储到磁盘–》填写用户电子邮件地址—&amp;gt;保存，这个时候会生成一张CertificateSigningRequest.certSigningRequest证书。&lt;/li&gt;
-  &lt;li&gt;9.将上述证书传给第7步，点击continue，生成APNs Push Certificate。&lt;/li&gt;
-  &lt;li&gt;10.这个时候去https://developer.apple.com/account/ios/certificate 找到你刚刚生成type为APNs Development IOS 的certification （name是你应用的bundleId），下载它。&lt;/li&gt;
-  &lt;li&gt;11.双击安装，钥匙串访问中你的证书会显示在我的证书中，（注意选择我的证书和 登录选项）。&lt;/li&gt;
-  &lt;li&gt;12.导出.p12文件就可以了。&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sun, 11 Mar 2018 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2018/03/ios%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/03/ios%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90/</guid>
         
         <category>iOS</category>
         
