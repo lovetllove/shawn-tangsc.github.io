@@ -36,7 +36,7 @@ tag: 服务器部署
 * 将该文件的读写权限给当前用户
 
 	```
-	sudo chown -R <user> /data/db/
+	sudo chown -R <user> /data/
 	```
 	
 * 建立软链接	
@@ -223,11 +223,33 @@ tag: 服务器部署
 	mongod -f /etc/mongod.conf
 	```
 	
+	* 通常来说，你会卡在这一步，比如说找不到fork 参数，那你就sudo ， sudo了又没有mongod命令了？ 那你就直接到目标目录去./mongod -f /etc/mongod.conf ，反正网上有好多。
+	
+	* 同时，如果你的node服务器上面发现连接mongo时出错，请关闭mongo服务器的防火墙。
 
+		```
+		MongoDB connection error: MongoError: failed to connect to server [localhost:27017]
+		```
+	
+
+	
 * 关闭mongdodb
 
 	```
 	mongod --shutdown -f /etc/mongod.conf
 	```
-	<font color=red>_注意！后台启动的mongdodb不要去暴力杀进程，不然你会发现各种各样奇怪的情况，我之前就遇到过无论如何都无法启动的情况，最后只能把/data/db 下所有文件全部删除，才恢复正常，切记切记！！！！！！_</font>
+  > * _注意！后台启动的mongdodb不要去暴力杀进程，不然你会发现各种各样奇怪的情况，我之前就遇到过无论如何都无法启动的情况，最后只能把/data/db 下所有文件全部删除，才恢复正常，切记切记！！！！！！重要的事情说三遍！
+  
+  > * 不要kill -9 ！！不要kill -9 ！！不要kill -9！！
 
+* 有一些异常
+
+```
+ERROR: child process failed, exited with error number 1
+```
+
+我部署了两次，第一次碰到了很多问题，但是并没有记下来，所以第二次我还是记一下
+
+```
+这个问题可能是你log日志的权限，所以一定要加权限
+```
